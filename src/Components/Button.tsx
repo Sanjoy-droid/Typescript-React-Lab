@@ -9,9 +9,9 @@
 // type Color = "red" | "blue" | "green" | "yellow";
 
 type ButtonProps = {
-  style: React.CSSProperties;
+  children: React.ReactNode;
 };
-export default function Button({ style }: ButtonProps) {
+export default function Button({ children }: ButtonProps) {
   // console.log(pillShaped);
   // console.log(fontSize);
   // console.log(backgroundColor);
@@ -21,7 +21,7 @@ export default function Button({ style }: ButtonProps) {
   return (
     <>
       <div>
-        <button style={style}>CLick Me</button>
+        <button>{children}</button>
       </div>
     </>
   );
