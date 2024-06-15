@@ -1,12 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Button from "./Components/Button";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>hello world!</>;
+  return (
+    <>
+      <div className="text-red-500">hello world</div>
+      <Button />
+    </>
+  );
 }
 
 export default App;
