@@ -9,19 +9,19 @@
 // type Color = "red" | "blue" | "green" | "yellow";
 
 type ButtonProps = {
-  children: React.ReactNode;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+  count: number;
 };
-export default function Button({ children }: ButtonProps) {
-  // console.log(pillShaped);
-  // console.log(fontSize);
-  // console.log(backgroundColor);
-  // console.log(textColor);
-  // console.log(padding);
+export default function Button({ setCount, count }: ButtonProps) {
+  const handleClick = () => {
+    setCount(count + 1);
+    console.log(count);
+  };
 
   return (
     <>
       <div>
-        <button>{children}</button>
+        <button onClick={handleClick}>CLICK ME</button>
       </div>
     </>
   );
