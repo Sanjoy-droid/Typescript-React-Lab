@@ -1,11 +1,10 @@
 import "./App.css";
-import Button from "./Components/Button";
+import Home from "./Components/Home";
 
 function App() {
   return (
     <>
-      <div className="text-red-500">hello world</div>
-      <Button />
+      <Home />
     </>
   );
 }
