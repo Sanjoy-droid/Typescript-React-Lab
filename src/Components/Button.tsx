@@ -6,10 +6,14 @@
 
 // const ExampleComponent: React:FC=()=>{}
 
+type Color = "red" | "blue" | "green" | "yellow";
+
 type ButtonProps = {
-  backgroundColor?: string;
+  backgroundColor?: Color;
+  textColor?: Color;
   fontSize?: number;
   pillShaped?: boolean;
+  padding?: [number, number, number, number];
 };
 
 export default function Button({
