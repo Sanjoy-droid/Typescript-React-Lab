@@ -6,34 +6,22 @@
 
 // const ExampleComponent: React:FC=()=>{}
 
-type Color = "red" | "blue" | "green" | "yellow";
+// type Color = "red" | "blue" | "green" | "yellow";
 
 type ButtonProps = {
-  backgroundColor?: Color;
-  textColor?: Color;
-  fontSize?: number;
-  pillShaped?: boolean;
-  padding?: [number, number, number, number];
+  style: React.CSSProperties;
 };
-
-export default function Button({
-  backgroundColor,
-  fontSize,
-  pillShaped,
-}: ButtonProps) {
-  console.log(pillShaped);
-  console.log(fontSize);
-  console.log(backgroundColor);
+export default function Button({ style }: ButtonProps) {
+  // console.log(pillShaped);
+  // console.log(fontSize);
+  // console.log(backgroundColor);
+  // console.log(textColor);
+  // console.log(padding);
 
   return (
     <>
       <div>
-        <button
-          className={`text-white rounded-lg  
-             w-20 h-10 flex justify-center items-center bg-purple-600 `}
-        >
-          Button
-        </button>
+        <button style={style}>CLick Me</button>
       </div>
     </>
   );
