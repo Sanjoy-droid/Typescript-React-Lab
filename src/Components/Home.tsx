@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <Button />
+      <Button countValue={5} countHistory={[10, 7, 3]} />
     </div>
   );
 };

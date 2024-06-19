@@ -1,20 +1,30 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const buttonTextOptions = [
-  "click me!",
-  "click me aganin",
-  "Click me one more again",
-] as const;
-export default function Button() {
+// const convertToArray =<T,> (value:T): T[] => {
+//   return [value];
+// };
+
+// function convertToArray<T>(value: T): T[] {
+//   return [value];
+// }
+
+// convertToArray(5);
+// convertToArray("hello ");
+
+type ButtonProps<T> = {
+  countValue: T;
+  countHistory: T[];
+};
+
+export default function Button<T>({
+  countValue,
+  countHistory,
+}: ButtonProps<T>) {
+  countHistory.push(countValue);
   return (
     <>
       <div>
-        <button>
-          {buttonTextOptions.map((option) => {
-            return option;
-          })}
-        </button>
-        {/* {count} */}
+        <button>click</button>
       </div>
     </>
   );
