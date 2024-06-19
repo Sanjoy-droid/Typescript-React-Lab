@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <Button setCount={setCount} count={count} />
+      <Button type="submit" autoFocus={true} />
     </div>
   );
 };
