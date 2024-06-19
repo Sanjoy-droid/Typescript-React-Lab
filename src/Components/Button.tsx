@@ -2,8 +2,6 @@
 // ...
 // }
 
-import { ComponentProps } from "react";
-
 // convertCurrency(100, "USD");
 
 // const ExampleComponent: React:FC=()=>{}
@@ -12,15 +10,25 @@ import { ComponentProps } from "react";
 
 //Interface
 
-// interface IButtonProps {
-//   text: string;
-//   count: number;
-// }
+interface ButtonProps {
+  type: "button" | "submit" | "reset";
+  color: "red" | "blue" | "green" | "yellow";
+}
+interface SuperButtonProps extends ButtonProps {
+  size: "small" | "medium" | "large";
+}
 
 // Type Alias
-type ButtonProps = React.ComponentPropsWithoutRef<"button">;
+// type ButtonProps = {
+//   type: "button" | "submit" | "reset";
+//   color: "red" | "blue" | "green" | "yellow";
+// };
 
-export default function Button({ type, autoFocus }: ButtonProps) {
+// type SuperButtonProps = ButtonProps & {
+//   size: "small" | "medium" | "large";
+// };
+
+export default function Button({}: ButtonProps) {
   // const handleClick = () => {};
 
   return (
