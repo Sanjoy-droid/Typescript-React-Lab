@@ -2,6 +2,8 @@
 // ...
 // }
 
+import { useState } from "react";
+
 // convertCurrency(100, "USD");
 
 // const ExampleComponent: React:FC=()=>{}
@@ -10,13 +12,13 @@
 
 //Interface
 
-interface ButtonProps {
-  type: "button" | "submit" | "reset";
-  color: "red" | "blue" | "green" | "yellow";
-}
-interface SuperButtonProps extends ButtonProps {
-  size: "small" | "medium" | "large";
-}
+// interface ButtonProps {
+//   type: "button" | "submit" | "reset";
+//   color: "red" | "blue" | "green" | "yellow";
+// }
+// interface SuperButtonProps extends ButtonProps {
+//   size: "small" | "medium" | "large";
+// }
 
 // Type Alias
 // type ButtonProps = {
@@ -28,13 +30,24 @@ interface SuperButtonProps extends ButtonProps {
 //   size: "small" | "medium" | "large";
 // };
 
-export default function Button({}: ButtonProps) {
-  // const handleClick = () => {};
+type User = {
+  name: string;
+  age: number;
+};
 
+export default function Button() {
+  const [count, setCount] = useState<number>(0);
+  const [text, setText] = useState("tackeis castle");
+
+  const [user, setUser] = useState<User | null>(null);
+
+  const name = user?.name;
   return (
     <>
       <div>
         <button>CLICK ME</button>
+        {/* {count} */}
+        {text}
       </div>
     </>
   );
